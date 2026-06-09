@@ -48,12 +48,12 @@ VisionLens/
 
 ---
 
-## ⚙️ Installation
+## Installation
 
 ### 1. Clone Repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/VisionLens.git
+git clone https://github.com/Sahil-Khandare/VisionLens.git
 cd VisionLens
 ```
 
