@@ -83,6 +83,9 @@ The application will open at:
 
 ```text
 http://localhost:8501
+```
+
+---
 
 ### Analysis Example
 
