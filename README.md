@@ -66,7 +66,7 @@ Lumina AI is an AI-powered image analysis web application that transforms visual
 
 ### Application Interface
 
-![Lumina AI Interface](screenshot/image.png)
+![Lumina AI Interface](screenshot/image.jpg)
 
 ---
 
