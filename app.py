@@ -16,46 +16,46 @@ API_KEY = os.getenv("NVIDIA_API_KEY")
 # =========================
 
 st.set_page_config(
-    page_title="VisionLens",
+    page_title="Lumina",
     page_icon="📷",
     layout="wide"
 )
+def get_base64_image(image_path):
+    with open(image_path, "rb") as img:
+        return base64.b64encode(img.read()).decode()
+    
+bg_image = get_base64_image("moon.png")
 
 # =========================
 # Custom CSS
 # =========================
 
-st.markdown("""
+st.markdown(f"""
 <style>
 
-.main {
-    background-color: #F5F1EA;
-}
-
-.block-container {
+.block-container {{
     padding-top: 2rem;
     padding-left: 5rem;
     padding-right: 5rem;
-}
+}}
 
-h1 {
+h1 {{
     font-size: 72px !important;
     font-family: Georgia, serif;
     font-weight: 300;
-    color: #111111;
-}
+    color: #white !important;
+}}
+body {{
+    color: #white;
+}}
 
-body {
-    color: #111111;
-}
-
-.small-header {
+.small-header {{
     letter-spacing: 3px;
     font-size: 12px;
     color: #666666;
-}
+}}
 
-.description-box {
+.description-box {{
     background-color: #1E1E1E;
     color: #FFFFFF;
     padding: 20px;
@@ -67,16 +67,16 @@ body {
 
     overflow-y: auto;
     line-height: 1.8;
-}
+}}
 
-hr {
+hr {{
     border: none;
     border-top: 1px solid #BBBBBB;
     margin-top: 10px;
     margin-bottom: 25px;
-}
+}}
 
-.selected-mode {
+.selected-mode {{
     background: linear-gradient(90deg,#16a34a,#22c55e);
     color: white;
     border-radius: 8px;
@@ -86,13 +86,39 @@ hr {
     font-weight: bold;
     border: 2px solid #4ade80;
     box-shadow: 0 0 15px rgba(34,197,94,0.6);
-}
+}}
 
-div[role="radiogroup"] label {
+div[role="radiogroup"] label {{
     font-size: 20px !important;
     padding: 20px !important;
     min-width: 250px;
-}
+}}
+            
+/* Full page background */
+.stApp {{
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.65),
+            rgba(0,0,0,0.65)
+        ),
+        url("data:image/png;base64,{bg_image}");
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}}
+
+/* Main content */
+.main {{
+    background: transparent;
+}}
+
+/* Text */
+h1, h2, h3, p, label {{
+    color: white !important;
+}}
+            
 </style>
 """, unsafe_allow_html=True)
 
@@ -101,10 +127,10 @@ div[role="radiogroup"] label {
 # =========================
 
 st.markdown("""
-<h1>VisionLens</h1>
+<h1>Lumina</h1>
 
 <p class="small-header">
-INDEPENDENT · VISUAL INTELLIGENCE · NVIDIA POWERED
+SEE BEYOND THE PIXELS · NVIDIA POWERED
 </p>
 
 <hr>
@@ -144,7 +170,7 @@ prompt = prompt_map[task]
 
 uploaded_file = st.file_uploader(
     "Upload an image",
-    type=["jpg", "jpeg", "png"]
+    type=["jpg","png","jpeg"]
 )
 
 if uploaded_file is not None:
@@ -199,7 +225,7 @@ if uploaded_file is not None:
                             ]
                         }
                     ],
-                    "max_tokens": 150
+                    "max_tokens": 400
                 }
 
                 try:
@@ -232,7 +258,7 @@ if uploaded_file is not None:
                         st.download_button(
                             label="📄 Download Report",
                             data=description,
-                            file_name="visionlens_report.txt",
+                            file_name="lumina_report.txt",
                             mime="text/plain",
                             key="download_report"
                         )
@@ -261,6 +287,5 @@ if uploaded_file is not None:
 st.markdown("---")
 
 st.caption(
-    "VisionLens • AI-Powered Visual Intelligence using NVIDIA NIM"
+    "Lumina AI • Transforming Images into Insights • Powered by NVIDIA NIM"
 )               
-
