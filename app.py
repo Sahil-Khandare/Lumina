@@ -16,7 +16,7 @@ API_KEY = os.getenv("NVIDIA_API_KEY")
 # =========================
 
 st.set_page_config(
-    page_title="Lumina",
+    page_title="Lumina AI",
     page_icon="📷",
     layout="wide"
 )
@@ -127,7 +127,7 @@ h1, h2, h3, p, label {{
 # =========================
 
 st.markdown("""
-<h1>Lumina</h1>
+<h1>Lumina AI</h1>
 
 <p class="small-header">
 SEE BEYOND THE PIXELS · NVIDIA POWERED
