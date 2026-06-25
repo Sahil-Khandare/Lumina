@@ -53,9 +53,9 @@ Lumina AI is an AI-powered image analysis web application that transforms visual
 2. Select an analysis mode:
 
    * Describe Image
-   * Summarize Image
+   * Quick Summary
    * Detect Objects
-   * Explain Scene
+   * Generate Caption
 3. Click **Generate Analysis**.
 4. The image is processed by NVIDIA's multimodal vision model.
 5. AI-generated insights are displayed instantly.
@@ -67,7 +67,7 @@ Lumina AI is an AI-powered image analysis web application that transforms visual
 
 ### Application Interface
 
-![Lumina AI Interface](screenshot/image.jpg)
+![Lumina AI Interface](screenshot/homepage.jpg)
 
 ---
 
@@ -80,9 +80,16 @@ Lumina-AI/
 │   └── config.toml
 │
 ├── screenshot/
-│   └── image.png
+│   └── homepage.png
+│
+├── api.py
 │
 ├── app.py
+│
+├── prompts.py
+│
+├── style.css
+│
 ├── moon.png
 ├── requirements.txt
 ├── README.md
