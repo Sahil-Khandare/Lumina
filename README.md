@@ -158,6 +158,7 @@ streamlit run app.py
 * Multi-image Analysis
 * PDF Report Generation
 * Chat-based Image Question Answering
+* Improve caption generation by fine-tuning prompts or using a dedicated image-captioning model to generate concise, engaging, and context-aware captions.
 
 ---
 
