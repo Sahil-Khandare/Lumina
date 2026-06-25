@@ -20,7 +20,7 @@ def get_base64_image(image_path):
     with open(image_path, "rb") as img:
         return base64.b64encode(img.read()).decode()
     
-bg_image = get_base64_image("moon.png")
+bg_image = get_base64_image("assets/moon.png")
 with open("style.css") as f:
     st.markdown(
         f"<style>{f.read()}</style>",
