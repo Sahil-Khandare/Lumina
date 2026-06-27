@@ -5,7 +5,7 @@ import os
 from dotenv import load_dotenv
 
 from api import analyze_image
-from prompts import PROMPT_MAP
+from prompts import PROMPT_MAP, MAX_TOKENS
 
 load_dotenv()
 API_KEY = os.getenv("NVIDIA_API_KEY")
