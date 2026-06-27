@@ -14,6 +14,7 @@ h1 {
     letter-spacing: 3px;
     font-size: 12px;
     color: #666666;
+    font-style: italic;
 }
 
 .description-box {
@@ -33,20 +34,22 @@ h1 {
 .stButton > button {
     width: 100%;
     border-radius: 15px;
-    padding: 10px !important;
+    width: 170px !important;
+    height: 50px !important;
+    padding: 5px !important;
     font-weight: bold;
-    background-color: #cc785c;
+    background-color: #bd5431;
     color: white !important;
     border: none;
 }
 .stButton > button:hover {
-    background-color: #f49a7b !important;
+    background-color: #d6795a !important;
     color: white !important;
 }
 
 .stButton > button:active,
 .stButton > button:focus {
-    background-color: #cc785c !important;
+    background-color: #bd5431 !important;
     color: white !important;
     box-shadow: none !important;
 }
@@ -54,17 +57,22 @@ h1 {
 .stDownloadButton > button {
     width: 100%;
     border-radius: 15px;
-    padding: 10px !important;
+    width: 170px !important;
+    height: 50px !important;
+    padding: 5px !important;
     font-weight: bold;
-    background-color: #96847e;
+    background-color: #615652;
     color: white !important;
     border: none;
 }
 
-.stDownloadButton > button:hover,
+.stDownloadButton > button:hover{
+    background-color: #9c827b !important;
+    color: white !important;
+}
 .stDownloadButton > button:active,
 .stDownloadButton > button:focus {
-    background-color: #ad9189 !important;
+    background-color:#615652 !important;
     color: white !important;
     border: none !important;
 }
@@ -78,11 +86,16 @@ hr {
 
 div[role="radiogroup"] label {
     font-size: 20px !important;
-    padding: 10px !important;
-    min-width: 150px;
+    padding: 5px !important;
     margin-right: 40px !important;
+    width: 155px !important;
+    height: 50px !important;
 
-    background-color: #5960a1;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #5d67c7;
     border-radius: 17px;
     border: none;
     color: white !important;
